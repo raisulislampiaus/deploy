@@ -13,7 +13,7 @@ function UpdatePost() {
 
 
   const getCategory = () => {
-    axios.get('https://dashboard1api-production.up.railway.app/api/category').then((res) => {
+    axios.get('https://pratices22.vercel.app/api/category').then((res) => {
       setCategorys(res.data)
 
     }).catch((error) => {
@@ -21,7 +21,7 @@ function UpdatePost() {
     })
   }
   const getCategory2 = () => {
-    axios.get('https://dashboard1api-production.up.railway.app/api/colorCategory').then((res) => {
+    axios.get('https://pratices22.vercel.app/api/colorCategory').then((res) => {
       setCategorys2(res.data)
 
     }).catch((error) => {
@@ -29,7 +29,7 @@ function UpdatePost() {
     })
   }
   const getCategory3 = () => {
-    axios.get('https://dashboard1api-production.up.railway.app/api/sizeCategory').then((res) => {
+    axios.get('https://pratices22.vercel.app/api/sizeCategory').then((res) => {
       setCategorys3(res.data)
 
     }).catch((error) => {
@@ -56,7 +56,7 @@ function UpdatePost() {
   
   useEffect(() => {
     // fetch product data and set it in the state
-    axios.get(`https://dashboard1api-production.up.railway.app/api/products/${id}`)
+    axios.get(`https://pratices22.vercel.app/api/products/${id}`)
       .then(res => setProduct(res.data));
       getCategory()  
       getCategory2()  
@@ -68,7 +68,7 @@ function UpdatePost() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.put(`https://dashboard1api-production.up.railway.app/api/products/${id}`, product)
+    axios.put(`https://pratices22.vercel.app/api/products/${id}`, product)
       .then(res => {
         console.log(res);
         console.log(res.data);
