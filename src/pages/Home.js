@@ -17,7 +17,7 @@ function Home() {
  
 
   const getCategorys = () => {
-    axios.get('https://dashboard1api-production.up.railway.app/api/category').then((res) => {
+    axios.get('https://pratices22.vercel.app/api/category').then((res) => {
       setCategory(res.data)
     }).catch((error) => {
       console.log(error)
@@ -26,7 +26,7 @@ function Home() {
  
 
   const getProducts = () => {
-    axios.get('https://dashboard1api-production.up.railway.app/api/products/all').then((res) => {
+    axios.get('https://pratices22.vercel.app/api/products/all').then((res) => {
       setProducts(res.data)
     }).catch((error) => {
       console.log(error)
