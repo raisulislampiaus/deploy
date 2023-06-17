@@ -22,7 +22,7 @@ function SizeCategory() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    axios.post("https://dashboard1api-production.up.railway.app/api/sizeCategory", name)
+    axios.post("https://pratices22.vercel.app/api/sizeCategory", name)
       .then(res => {
         message.success('category added Successfully')
         handleClose()
@@ -35,7 +35,7 @@ function SizeCategory() {
   };
 
   const getProducts = () => {
-    axios.get('https://dashboard1api-production.up.railway.app/api/sizeCategory').then((res) => {
+    axios.get('https://pratices22.vercel.app/api/sizeCategory').then((res) => {
       setProducts(res.data)
     }).catch((error) => {
       console.log(error)
@@ -44,7 +44,7 @@ function SizeCategory() {
   const deletePost = (id) => {
     console.log(id);
     axios
-      .delete(`https://dashboard1api-production.up.railway.app/api/sizeCategory/${id}`)
+      .delete(`https://pratices22.vercel.app/api/sizeCategory/${id}`)
       .then((result) => {
         message.success('category deleted Successfully')
         getProducts();
