@@ -14,7 +14,7 @@ function SingleProduct({ match }) {
 
 
     const getProducts = () => {
-        axios.get(`https://dashboard1api-production.up.railway.app/api/products/${id}`).then((res) => {
+        axios.get(`https://pratices22.vercel.app/api/products/${id}`).then((res) => {
             setProduct(res.data)
             
         }).catch((error) => {
