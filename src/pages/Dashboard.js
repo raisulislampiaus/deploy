@@ -11,7 +11,7 @@ function Dashboard() {
 
 
     const getProducts = () => {
-        axios.get('https://pratices22.vercel.app/api/products/gets/count').then((res) => {
+        axios.get('https://dashboard-api1.onrender.com/api/products/gets/count').then((res) => {
             setProducts(res.data)
         }).catch((error) => {
             console.log(error)
