@@ -39,7 +39,7 @@ function Products() {
     data.append("largeDescription", largeDescription);
     data.append("image", image);
 
-    axios.post("https://pratices22.vercel.app/api/products", data)
+    axios.post("https://dashboard-api1.onrender.com/api/products", data)
       .then(res => {
         message.success('products added Successfully')
         setIsModalOpen(false)
@@ -64,7 +64,7 @@ function Products() {
 
 
   const getProducts = () => {
-    axios.get('https://pratices22.vercel.app/api/products/all').then((res) => {
+    axios.get('https://dashboard-api1.onrender.com/api/products/all').then((res) => {
       setProducts(res.data)
       console.log(res.data)
     }).catch((error) => {
@@ -72,7 +72,7 @@ function Products() {
     })
   }
   const getCategory = () => {
-    axios.get('https://pratices22.vercel.app/api/category').then((res) => {
+    axios.get('https://dashboard-api1.onrender.com/api/category').then((res) => {
       setCategorys(res.data)
 
     }).catch((error) => {
@@ -81,7 +81,7 @@ function Products() {
   }
 
   const colorCategoryget = () => {
-    axios.get('https://pratices22.vercel.app/api/colorCategory').then((res) => {
+    axios.get('https://dashboard-api1.onrender.com/api/colorCategory').then((res) => {
       setColorCategorys(res.data)
 
     }).catch((error) => {
@@ -90,7 +90,7 @@ function Products() {
   }
 
   const sizeCategoryget = () => {
-    axios.get('https://pratices22.vercel.app/api/sizeCategory').then((res) => {
+    axios.get('https://dashboard-api1.onrender.com/api/sizeCategory').then((res) => {
       setSizeCategorys(res.data)
 
     }).catch((error) => {
@@ -103,7 +103,7 @@ function Products() {
   const deletePost = (id) => {
     console.log(id);
     axios
-      .delete(`https://pratices22.vercel.app/api/products/${id}`)
+      .delete(`https://dashboard-api1.onrender.com/api/products/${id}`)
       .then((result) => {
         message.success('products deleted Successfully')
         getProducts();
