@@ -71,7 +71,7 @@ function ColorCategory() {
   return (
     <div>
       <div className='d-flex justify-content-between'>
-        <h4>Products</h4>
+        <h4>ColorCategory</h4>
         <Button type='primary' onClick={handleShow}>Add Category</Button>
       </div>
       <Table striped bordered hover>
