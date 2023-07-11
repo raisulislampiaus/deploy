@@ -24,7 +24,7 @@ function ColorCategory() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    axios.post("https://pratices22.vercel.app/api/colorCategory", name)
+    axios.post("https://dashboard-api1.onrender.com/api/colorCategory", name)
       .then(res => {
         message.success('category added Successfully')
         handleClose()
@@ -37,7 +37,7 @@ function ColorCategory() {
   };
 
   const getProducts = () => {
-    axios.get('https://pratices22.vercel.app/api/colorCategory').then((res) => {
+    axios.get('https://dashboard-api1.onrender.com/api/colorCategory').then((res) => {
       setProducts(res.data)
     }).catch((error) => {
       console.log(error)
@@ -46,7 +46,7 @@ function ColorCategory() {
   const deletePost = (id) => {
     console.log(id);
     axios
-      .delete(`https://pratices22.vercel.app/api/colorCategory/${id}`)
+      .delete(`https://dashboard-api1.onrender.com/api/colorCategory/${id}`)
       .then((result) => {
         message.success('category deleted Successfully')
         getProducts();
